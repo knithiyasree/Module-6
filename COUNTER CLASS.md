@@ -1,35 +1,47 @@
 # Exp.No:30  
-## COUNTER CLASS
+## overloading operator
 
 ---
 
 ### AIM  
-To write a Python program to create a `Counter` class that can increment the value of a counter.
+To Write a Python program for simply using the overloading operator for adding two objects.
+class name : fruits
+object name :  apple, mango, a and b
 
 ---
 
 ### ALGORITHM
+1. Begin the program.
+2. Create a class `fruit`:
+   - Define the `__init__()` method to initialize the attribute `x`.
+   - Define the `__add__()` method to return the sum or concatenation of `self.x` and `u.x`.
+3. Accept two integer inputs and create objects `a` and `b` of the `fruit` class.
+4. Print the result of `a + b` as the sum of the two integers.
+5. Accept two string inputs and create objects `s` and `r` of the `fruit` class.
+6. Print the result of `s + r` as the concatenation of the two strings.
+7. Terminate the program.
 
-1. **Start the Program.**
-2. **Define the `Counter` class.**
-   - Initialize the `current` variable with 0.
-3. **Define the `increment()` method** to increment the value of `current` by 1.
-4. **Define the `value()` method** to return the current value of `current`.
-5. **Define the `reset()` method** to reset the `current` value back to 0.
-6. **Create a `counter` object** of the `Counter` class.
-7. **Call the `increment()` method** three times to increment the counter.
-8. **Call the `value()` method** and print the result to show the current counter value.
-9. **End the program.**
-
----
 
 ### PROGRAM
 
 ```
+class fruit:
+    def __init__(self,x):
+        self.x=x
+    def __add__(self,u):
+        return self.x + u.x
 
+a = fruit(int(input()))
+b = fruit(int(input()))
+print("apple and mango mixed:", a+b)
+s = fruit(str(input()))
+r = fruit(str(input()))
+print("fruit mix: ", s+r)
 ```
 
 ### OUTPUT
+<img width="781" height="227" alt="image" src="https://github.com/user-attachments/assets/fa3179cd-6224-4cfe-8638-325138bb30d9" />
 
 
 ### RESULT
+Thus a Python program for simply using the overloading operator for adding two objects has been executed successfully.
