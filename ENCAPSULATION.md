@@ -4,7 +4,7 @@
 ---
 
 ### AIM  
-To write a Python program to create a class `Student` with the private members `name` and `age`, and add getter and setter methods to initialize and modify the `age` variable.
+To Create a class student with members name ,age,rollno and an user defined function show() to display the details of the student ,use the getter and setter method Information Hiding and conditional logic for setting an object attributes
 
 ---
 
@@ -26,14 +26,44 @@ To write a Python program to create a class `Student` with the private members `
 ### PROGRAM
 
 ```
+class Student:
+    def __init__(self, name, roll_no, age):
+        # private member
+        self.name = name
+        # private members to restrict access
+        # avoid direct data modification
+        self.__roll_no = roll_no
+        self.__age = age
 
+    def show(self):
+        print('Student Details:', self.name, self.__roll_no)
+
+    # getter methods
+    def get_roll_no(self):
+        return self.__roll_no
+
+    # setter method to modify data member
+    # condition to allow data modification with rules
+    def set_roll_no(self, number):
+        if number > 50:
+            print('Invalid roll no. Please set correct roll number')
+        else:
+            self.__roll_no = number
+
+jessa = Student('Jessa', 10, 15)
+jessa.show()
+jessa.set_roll_no(120)
+jessa.set_roll_no(25)
+jessa.show()
 
 
 ```
 
 ### OUTPUT
+<img width="1040" height="291" alt="image" src="https://github.com/user-attachments/assets/e1d2e633-bdfb-471e-a4de-333c812e09c8" />
 
 
-### RESULT
+### RESULT:
+Thus a class student with members name ,age,rollno and an user defined function show() to display the details of the student ,use the getter and setter method Information Hiding and conditional logic for setting an object attributes has been created and executed sccessfully.
 
 
